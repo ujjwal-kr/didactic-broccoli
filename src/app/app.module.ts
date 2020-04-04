@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { TalkComponent } from './talk/talk.component';
 import { VerifyComponent } from './verify/verify.component';
 import { SelectComponent } from './select/select.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,10 @@ import { SelectComponent } from './select/select.component';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase, 'didactic-broccoli'),
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
