@@ -13,6 +13,7 @@ import { SelectComponent } from './select/select.component';
 import { MaterialModule } from './material.module';
 import { StatusService } from './services/status.service';
 import { TalkComponent2 } from './talk2/talk.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TalkComponent2 } from './talk2/talk.component';
     AngularFireModule.initializeApp(environment.firebase, 'didactic-broccoli'),
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [StatusService],
   bootstrap: [AppComponent]

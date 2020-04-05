@@ -14,7 +14,6 @@ userCollection2: AngularFirestoreCollection<User2>;
 isActive: boolean;
 isVerified: boolean;
 
-
   constructor(private afs: AngularFirestore) { 
     this.userCollection1 = this.afs.collection('user1');
     this.userCollection2 = this.afs.collection('user2');
@@ -42,5 +41,37 @@ isVerified: boolean;
 
   checkUser2() {
     return this.userCollection2.valueChanges();
+  }
+
+  onlineUser1() {
+    const userRef = this.afs.doc(`user1/she`);
+    const data = {
+      isOnline: true
+    }
+    return userRef.update(data);
+  }
+
+  offineUser1() {
+    const userRef = this.afs.doc(`user1/she`);
+    const data = {
+      isOnline: false
+    }
+    return userRef.update(data);
+  }
+
+  onlineUser2() {
+    const userRef = this.afs.doc(`user1/he`);
+    const data = {
+      isOnline: true
+    }
+    return userRef.update(data);
+  }
+
+  offineUser2() {
+    const userRef = this.afs.doc(`user1/he`);
+    const data = {
+      isOnline: false
+    }
+    return userRef.update(data);
   }
 }
