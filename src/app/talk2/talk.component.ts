@@ -3,11 +3,11 @@ import { StatusService } from '../services/status.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-talk',
+  selector: 'app-talk2',
   templateUrl: './talk.component.html',
   styleUrls: ['./talk.component.sass']
 })
-export class TalkComponent implements OnInit {
+export class TalkComponent2 implements OnInit {
 
   constructor(private statusService: StatusService, private router: Router) { }
   

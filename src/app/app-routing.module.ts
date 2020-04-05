@@ -4,13 +4,15 @@ import { HomeComponent } from './home/home.component';
 import { TalkComponent } from './talk/talk.component';
 import { VerifyComponent } from './verify/verify.component';
 import { SelectComponent } from './select/select.component';
+import { TalkComponent2 } from './talk2/talk.component';
 
 
 const routes: Routes = [
-  {path: '/', component: HomeComponent},
-  {path: '/name', component: VerifyComponent},
-  {path: '/select', component: SelectComponent},
-  {path: '/main', component: TalkComponent}
+  {path: '', component: HomeComponent},
+  {path: 'name', component: VerifyComponent},
+  {path: 'select', component: SelectComponent},
+  {path: 'main', component: TalkComponent},
+  {path: 'main2', component: TalkComponent2}
 ];
 
 @NgModule({

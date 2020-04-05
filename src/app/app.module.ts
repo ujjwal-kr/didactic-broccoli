@@ -11,12 +11,15 @@ import { TalkComponent } from './talk/talk.component';
 import { VerifyComponent } from './verify/verify.component';
 import { SelectComponent } from './select/select.component';
 import { MaterialModule } from './material.module';
+import { StatusService } from './services/status.service';
+import { TalkComponent2 } from './talk2/talk.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TalkComponent,
+    TalkComponent2,
     VerifyComponent,
     SelectComponent
   ],
@@ -27,7 +30,7 @@ import { MaterialModule } from './material.module';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [StatusService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
