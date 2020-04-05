@@ -19,4 +19,13 @@ chatCollection: AngularFirestoreCollection<Chat>
   postChat(chat: Chat) {
     this.chatCollection.add(chat);
   }
+
+  deleteChats() {
+    const q = this.afs.collection('chats', ref => ref.where('uni', '==', 'uni'));
+    q.get().subscribe(data => {
+      data.forEach(doc => {
+        doc.ref.delete();
+      })
+    })
+  }
 }

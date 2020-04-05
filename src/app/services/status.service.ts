@@ -35,12 +35,12 @@ isVerified: boolean;
     return this.isVerified = false;
   }
 
-  checkUser1() {
-    return this.userCollection1.valueChanges();
+  user1IsOnline(){
+    return this.userCollection1.doc(`she`).valueChanges()
   }
 
-  checkUser2() {
-    return this.userCollection2.valueChanges();
+  user2IsOnline(){
+    return this.userCollection2.doc(`he`).valueChanges()
   }
 
   onlineUser1() {
@@ -60,7 +60,7 @@ isVerified: boolean;
   }
 
   onlineUser2() {
-    const userRef = this.afs.doc(`user1/he`);
+    const userRef = this.afs.doc(`user2/he`);
     const data = {
       isOnline: true
     }
@@ -68,7 +68,7 @@ isVerified: boolean;
   }
 
   offineUser2() {
-    const userRef = this.afs.doc(`user1/he`);
+    const userRef = this.afs.doc(`user2/he`);
     const data = {
       isOnline: false
     }

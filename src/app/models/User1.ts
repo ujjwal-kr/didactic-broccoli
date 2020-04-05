@@ -1,4 +1,4 @@
 export interface User1 {
-    isonline?: boolean;
+    isOnline?: boolean;
     name?: string;
 }
