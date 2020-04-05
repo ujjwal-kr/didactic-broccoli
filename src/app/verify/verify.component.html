@@ -1,2 +1,19 @@
-<p>verify works!</p>
-<a [routerLink]="['/select']">TALK</a>
+<mat-toolbar color = "primary" style ="height: 60px;">
+    <mat-toolbar-row>
+      Didactic Broccoli
+      <span class=example-spacer></span>
+      <img src="../../assets/logo.png" class="example-icon">
+    </mat-toolbar-row>
+</mat-toolbar>
+<div style="width: 100%; text-align: center;">
+  <form [formGroup]="verifyForm">
+    <p>
+        <mat-form-field appearance="outline" color="accent" class="curve">
+          <mat-label>Enter Your Name</mat-label>
+          <input matInput placeholder="Name" formControlName="name" type = "password">
+        </mat-form-field>
+      </p>
+
+      <button mat-flat-button color = "accent" (click)="postName()">Enter</button>
+</form>
+</div>
