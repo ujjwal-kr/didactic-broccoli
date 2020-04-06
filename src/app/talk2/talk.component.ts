@@ -24,6 +24,9 @@ messageForm: FormGroup;
     private router: Router) { }
 
   ngOnInit(): void {
+    window.onbeforeunload = () => {
+      this.statusService.offineUser2();
+    }
     this.statusService.onlineUser2();
     this.statusService.activateUser();
     if (!this.statusService.isActive) this.router.navigate(['/']);

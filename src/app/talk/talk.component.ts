@@ -24,6 +24,9 @@ export class TalkComponent implements OnInit, OnDestroy {
     private router: Router) { }
 
   ngOnInit(): void {
+    window.onbeforeunload = () => {
+      this.statusService.offineUser1();
+    }
     this.statusService.onlineUser1();
     this.statusService.activateUser();
     if (!this.statusService.isActive) this.router.navigate(['/']);

@@ -51,6 +51,14 @@ isVerified: boolean;
     return userRef.update(data);
   }
 
+  alertUser1() {
+    const userRef = this.afs.doc(`user1/she`);
+    const data: User1 = {
+      inTrouble: true
+    }
+    return userRef.update(data);
+  }
+
   offineUser1() {
     const userRef = this.afs.doc(`user1/she`);
     const data = {
