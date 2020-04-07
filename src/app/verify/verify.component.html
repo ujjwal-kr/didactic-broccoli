@@ -1,4 +1,4 @@
-<mat-toolbar color = "primary" style ="height: 60px;">
+<mat-toolbar color = "primary" style ="height: 60px;" [routerLink] = "['']" class = "text">
     <mat-toolbar-row>
       Didactic Broccoli
       <span class=example-spacer></span>
@@ -6,14 +6,14 @@
     </mat-toolbar-row>
 </mat-toolbar>
 <div style="width: 100%; text-align: center;">
-  <form [formGroup]="verifyForm">
+  <form [formGroup]="verifyForm" class = "text">
     <p>
         <mat-form-field appearance="outline" color="accent" class="curve">
-          <mat-label>Enter Your Name</mat-label>
-          <input matInput placeholder="Name" formControlName="name" type = "password">
+          <mat-label class = "text">Asteroid Name</mat-label>
+          <input class = "text" matInput placeholder="asteroid passcode" formControlName="name" type = "password">
         </mat-form-field>
       </p>
 
-      <button mat-flat-button color = "accent" (click)="postName()">Enter</button>
+      <button class = "text" mat-flat-button color = "accent" (click)="postName()">Enter</button>
 </form>
 </div>

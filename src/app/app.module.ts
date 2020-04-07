@@ -14,6 +14,7 @@ import { MaterialModule } from './material.module';
 import { StatusService } from './services/status.service';
 import { TalkComponent2 } from './talk2/talk.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WikiComponent } from './wiki/wiki.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TalkComponent,
     TalkComponent2,
     VerifyComponent,
-    SelectComponent
+    SelectComponent,
+    WikiComponent
   ],
   imports: [
     BrowserModule,

@@ -26,10 +26,11 @@ export class TalkComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     window.onbeforeunload = () => {
       this.statusService.offineUser1();
+      this.statusService.deactivateUser();
     }
-    this.statusService.onlineUser1();
     this.statusService.activateUser();
-    if (!this.statusService.isActive) this.router.navigate(['/']);
+    if (!this.statusService.isActive) this.router.navigate(['/wiki']);
+    this.statusService.onlineUser1();
     this.messageForm = this.fb.group({
       message: ['', [
         Validators.required,
@@ -78,6 +79,7 @@ export class TalkComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.statusService.offineUser1();
+    this.statusService.deactivateUser();
   }
 
 }

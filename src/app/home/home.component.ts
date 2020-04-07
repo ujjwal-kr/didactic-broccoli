@@ -29,8 +29,8 @@ export class HomeComponent implements OnInit {
     alert('Something Went Wrong!')
   }
 
-  verify() {
-    return this.router.navigate(['/name']);
+  select() {
+    this.router.navigate(['/select']);
   }
 
 }

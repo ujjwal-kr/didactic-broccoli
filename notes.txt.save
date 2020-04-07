@@ -1,0 +1,19 @@
+didactic-broccoli
+ng app
+wikipedia article mapping support
+cancel the game dicision
+present wikipedia article quickly
+pwa support
+create wikipedia component
+   -- it will display wikipedia image initially
+   -- then it will route to a wikipedia article
+   -- here are some links to be followed
+https://en.wikipedia.org/wiki/Wormhole
+https://en.wikipedia.org/wiki/Proxima_Centauri
+https://en.wikipedia.org/wiki/Black_hole
+https://en.wikipedia.org/wiki/Asteroid
+https://en.wikipedia.org/wiki/Comet
+https://en.wikipedia.org/wiki/Centaur_(minor_planet)
+https://en.wikipedia.org/wiki/Jupiter_trojan
+https://en.wikipedia.org/wiki/Colonization_of_Mars
+

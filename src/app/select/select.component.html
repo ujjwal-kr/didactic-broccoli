@@ -1,4 +1,4 @@
-<mat-toolbar color = "primary" style ="height: 60px;">
+<mat-toolbar color = "primary" style ="height: 60px;" [routerLink] = "['']" class = "text">
     <mat-toolbar-row>
       Didactic Broccoli
       <span class=example-spacer></span>
@@ -8,8 +8,8 @@
 
 
 <div style="width: 100%; text-align: center; padding-top: 100px;">
-    <button [routerLink]="['/main']" class="curve" mat-flat-button color = "primary">Her</button><br>
+    <button class = "text" [routerLink]="['/name/1']" mat-flat-button color = "primary">Asteroid</button><br>
     <p></p>
-    <button [routerLink]="['/main2']" class="curve" mat-flat-button color = "primary">Him</button>
+    <button class = "text" [routerLink]="['/name/2']" mat-flat-button color = "primary">Comet</button>
 </div>
   
