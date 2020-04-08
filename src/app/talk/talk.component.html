@@ -1,5 +1,49 @@
-<nav (click) ="deactivate()">
-    Didactic Broccoli
+<nav>
+    DB
 </nav>
-<p *ngIf="user2Online">ONLINE</p>
-<p *ngIf="!user2Online">OFFLINE</p>
+
+<section>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+    <div class="chat">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    </div>
+</section>
+
+<footer>
+    <form [formGroup] = "messageForm">
+        <input class = "text" placeholder="text" formControlName="message" type = "text">
+        <button color = "accent" mat-fab (click) = "postMessage()"><mat-icon color = "primary">send</mat-icon></button>
+    </form>
+</footer>
