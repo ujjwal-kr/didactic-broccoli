@@ -7,9 +7,9 @@
 </mat-toolbar>
 <section class="text">
   <h1 class="text">Wikipedia articles about space</h1>
-  <a class = "text" mat-button color="accent" href="https://en.wikipedia.org/wiki/Wormhole" target="_blank">Wormhole</a><br>
-  <a class = "text" mat-button color="accent" href="https://en.wikipedia.org/wiki/Proxima_Centauri" target="_slef">Proxima Star</a><br>
-  <a class = "text" mat-button color="accent" href="https://en.wikipedia.org/wiki/Black_hole" target="_slef">Black hole</a><br>
+  <a class = "text" mat-button color="accent" href="https://en.wikipedia.org/wiki/Wormhole" target="_blank" (click) = "deleteAll()">Wormhole</a><br>
+  <a class = "text" mat-button color="accent" href="https://en.wikipedia.org/wiki/Proxima_Centauri" target="_slef" (click) = "deleteAll()">Proxima Star</a><br>
+  <a class = "text" mat-button color="accent" href="https://en.wikipedia.org/wiki/Black_hole" target="_slef" (click) = "deleteAll()">Black hole</a><br>
   <a class = "text" mat-button color="accent" [routerLink] = "['/select']">Asteroid</a><br>
   <a class = "text" mat-button color="accent" href="https://en.wikipedia.org/wiki/Jupiter_trojan" target="_slef">Jupiter Trojan</a>
 </section>

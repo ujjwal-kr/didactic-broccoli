@@ -17,6 +17,7 @@ export class TalkComponent2 implements OnInit, OnDestroy {
 chats: Chat[];
 user1Online: boolean;
 messageForm: FormGroup;
+el: any;
 
   constructor(private statusService: StatusService,
     private chatService: ChatService,
@@ -27,8 +28,9 @@ messageForm: FormGroup;
     window.onbeforeunload = () => {
       this.statusService.offineUser2();
     }
-    this.statusService.onlineUser2();
     this.statusService.activateUser();
+    this.el = document.getElementById("lol");
+    this.statusService.onlineUser2();
     if (!this.statusService.isActive) this.router.navigate(['/']);
     this.messageForm = this.fb.group({
       message: ['', [
@@ -37,6 +39,7 @@ messageForm: FormGroup;
     })
     this.getUser1();
     this.getChats();
+    this.el.scrollIntoView();
   }
 
   deactivate() {
@@ -48,7 +51,7 @@ messageForm: FormGroup;
     return this.messageForm.get('message').value;
   }
 
-  postChat() {
+  postMessage() {
     const chat: Chat = {
       date: firebase.firestore.FieldValue.serverTimestamp(),
       user: 'he',
@@ -57,6 +60,8 @@ messageForm: FormGroup;
     }
 
     this.chatService.postChat(chat);
+    this.messageForm.reset();
+    this.el.scrollIntoView();
   }
 
   getUser1() {
@@ -69,15 +74,18 @@ messageForm: FormGroup;
   getChats() {
     this.chatService.getChats().subscribe(data => {
       this.chats = data;
+      this.el.scrollIntoView();
     })
   }
 
   delete() {
     this.chatService.deleteChats();
+    this.ngOnInit();
   }
 
   ngOnDestroy() {
     this.statusService.offineUser2();
+    this.statusService.deactivateUser();
   }
 
 }

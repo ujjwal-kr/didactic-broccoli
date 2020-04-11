@@ -1,44 +1,13 @@
-<nav>
+<nav (click) = "deactivate()">
     DB
+    <br> <span *ngIf = "user2Online">Online</span>
 </nav>
 
 <section>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
+    <div class="chat" *ngFor="let chat of chats" [ngClass]="{'green':chat.user === 'he'}">
+        {{chat.message}}
     </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
-    <div class="chat">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptas delectus id molestiae sapiente assumenda cumque! Obcaecati, in aliquid, excepturi blanditiis sint illum deserunt laboriosam eum tempora omnis cumque beatae.
-    </div>
+    <div id="lol" style="height: 20px;"></div>
 </section>
 
 <footer>

@@ -1,0 +1,71 @@
+nav
+  height: 60px
+  background: #226add
+  overflow: hidden
+  color: white
+  padding-top: 7px
+  padding-left: 7px
+  position: fixed
+  width: 100%
+  z-index: 100
+
+.example-spacer 
+    flex: 1 1 auto
+
+.example-icon 
+    padding: 0 20px
+    
+section
+  top: 67px
+  width: 100%
+  overflow-y: scroll
+  padding-bottom: 100px
+  padding-top: 67px
+
+  .chat
+    font-size: 1.2em
+    width: 91%
+    padding: 4.5%
+    border-top: red
+    background: #611fcc
+  
+footer
+    position: fixed
+    bottom: 0
+    width: 100%
+    z-index: 100
+
+    form
+      display: inline-block
+      width: 100%
+
+      input
+        padding: 8px 5px
+        width: 83%
+        outline: none
+        font-size: 1.2em
+        border: 1px solid #bbb
+        border-radius: 20px
+        display: inline-block
+
+        button
+          position: relative
+          color: white !important
+          float: right
+
+@media all and (max-width:  400px)
+  footer
+    form
+      input
+        width: 78%
+  
+
+@media all and (max-width:  310px)
+  footer
+    form
+      input
+        width: 75%
+
+.green
+  background: #00aa39 !important
+

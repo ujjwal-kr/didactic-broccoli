@@ -1,5 +1,5 @@
 nav
-  height: 35px
+  height: 60px
   background: #226add
   overflow: hidden
   color: white
@@ -16,17 +16,18 @@ nav
     padding: 0 20px
     
 section
-  position: relative
-  top: 42px
-  height: 95%
+  top: 67px
   width: 100%
+  overflow-y: scroll
+  padding-bottom: 100px
+  padding-top: 67px
 
   .chat
     font-size: 1.2em
     width: 91%
     padding: 4.5%
     border-top: red
-    background: green
+    background: #611fcc
   
 footer
     position: fixed
@@ -42,7 +43,7 @@ footer
         padding: 8px 5px
         width: 83%
         outline: none
-        font-size: 1em
+        font-size: 1.2em
         border: 1px solid #bbb
         border-radius: 20px
         display: inline-block
@@ -57,10 +58,11 @@ footer
     form
       input
         width: 78%
-  
 
 @media all and (max-width:  310px)
   footer
     form
       input
         width: 75%
+.green
+  background: #00aa39 !important        

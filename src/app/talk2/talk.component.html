@@ -1,4 +1,18 @@
-<p>talk works!</p>
-<a (click) = "deactivate()">DEACTIVATE</a>
-<p *ngIf="user1Online">ONLINE</p>
-<p *ngIf="!user1Online">OFFLINE</p>
+<nav (click) = "deactivate()">
+    DB
+    <span *ngIf = "user1Online">Online</span>
+</nav>
+
+<section>
+    <div class="chat" *ngFor="let chat of chats" [ngClass]="{'green':chat.user === 'he'}">
+        {{chat.message}}
+    </div>
+    <div id="lol" style="height: 20px;"></div>
+</section>
+
+<footer>
+    <form [formGroup] = "messageForm">
+        <input class = "text" placeholder="text" formControlName="message" type = "text">
+        <button color = "accent" mat-fab (click) = "postMessage()"><mat-icon color = "primary">send</mat-icon></button>
+    </form>
+</footer>
