@@ -9,6 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./verify.component.sass']
 })
 export class VerifyComponent implements OnInit {
+  
 verifyForm: FormGroup;
 id: string;
   constructor(private statusService: StatusService,

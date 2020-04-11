@@ -5,7 +5,6 @@ import { TalkComponent } from './talk/talk.component';
 import { VerifyComponent } from './verify/verify.component';
 import { SelectComponent } from './select/select.component';
 import { TalkComponent2 } from './talk2/talk.component';
-import { WikiComponent } from './wiki/wiki.component';
 
 
 const routes: Routes = [
@@ -14,7 +13,6 @@ const routes: Routes = [
   {path: 'select', component: SelectComponent},
   {path: 'main1', component: TalkComponent},
   {path: 'main2', component: TalkComponent2},
-  {path: 'wiki', component: WikiComponent}
 ];
 
 @NgModule({

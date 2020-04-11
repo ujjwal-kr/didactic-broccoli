@@ -31,7 +31,7 @@ export class TalkComponent implements OnInit, OnDestroy {
     }
     this.el = document.getElementById("lol");
     this.statusService.activateUser();
-    if (!this.statusService.isActive) this.router.navigate(['/wiki']);
+    if (!this.statusService.isActive) this.router.navigate(['/'], { queryParams: { id: 'wiki' } });
     this.statusService.onlineUser1();
     this.messageForm = this.fb.group({
       message: ['', [
