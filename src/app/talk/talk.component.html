@@ -12,7 +12,7 @@
 
 <footer>
     <form [formGroup] = "messageForm">
-        <input class = "text" placeholder="text" formControlName="message" type = "text">
+        <input id = "input" class = "text" placeholder="text" formControlName="message" type = "text">
         <button color = "accent" mat-fab (click) = "postMessage()"><mat-icon color = "primary">send</mat-icon></button>
     </form>
 </footer>

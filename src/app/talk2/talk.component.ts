@@ -18,6 +18,7 @@ chats: Chat[];
 user1Online: boolean;
 messageForm: FormGroup;
 el: any;
+input: any;
 
   constructor(private statusService: StatusService,
     private chatService: ChatService,
@@ -30,6 +31,7 @@ el: any;
     }
     this.statusService.activateUser();
     this.el = document.getElementById("lol");
+    this.input = document.getElementById("input");
     this.statusService.onlineUser2();
     if (!this.statusService.isActive) this.router.navigate(['/']);
     this.messageForm = this.fb.group({
@@ -61,6 +63,7 @@ el: any;
 
     this.chatService.postChat(chat);
     this.messageForm.reset();
+    this.input.focus();
     this.el.scrollIntoView();
   }
 

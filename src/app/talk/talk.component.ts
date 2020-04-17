@@ -18,6 +18,7 @@ export class TalkComponent implements OnInit, OnDestroy {
   user2Online: boolean;
   messageForm: FormGroup;
   el: any;
+  input: any;
 
   constructor(private chatService: ChatService,
     private statusService: StatusService,
@@ -30,6 +31,7 @@ export class TalkComponent implements OnInit, OnDestroy {
       this.statusService.deactivateUser();
     }
     this.el = document.getElementById("lol");
+    this.input = document.getElementById("input");
     this.statusService.activateUser();
     if (!this.statusService.isActive) this.router.navigate(['/'], { queryParams: { id: 'wiki' } });
     this.statusService.onlineUser1();
@@ -55,7 +57,7 @@ export class TalkComponent implements OnInit, OnDestroy {
   }
 
   postMessage() {
-    if(this.message.length < 1 || this.message.length == " ") return false
+    if(this.message.length < 1 || this.message == " ") return false
     const chat: Chat = {
       date: firebase.firestore.FieldValue.serverTimestamp(),
       user: 'she',
@@ -64,7 +66,8 @@ export class TalkComponent implements OnInit, OnDestroy {
     }
 
     this.chatService.postChat(chat);
-    this.el.scrollIntoView(); 
+    this.el.scrollIntoView();
+    this.input.focus();
     this.messageForm.reset();
   }
 
