@@ -46,6 +46,7 @@ input: any;
 
   deactivate() {
     this.statusService.deactivateUser();
+    this.delete();
     this.ngOnInit();
   }
 

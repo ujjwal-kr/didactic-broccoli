@@ -1,4 +1,4 @@
-<nav (click) = "deactivate()">
+<nav (click) = "delete()">
     DB
     <br> <span *ngIf = "user2Online">Online</span>
 </nav>
@@ -14,5 +14,5 @@
     <form [formGroup] = "messageForm">
         <input id = "input" class = "text" placeholder="text" formControlName="message" type = "text">
         <button color = "accent" mat-fab (click) = "postMessage()"><mat-icon color = "primary">send</mat-icon></button>
-    </form>
+    </form>z
 </footer>
