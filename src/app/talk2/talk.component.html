@@ -1,6 +1,7 @@
 <nav (click) = "delete()">
-    DB <br>
+    She <br>
     <span *ngIf = "user1Online">Online</span>
+    <span *ngIf="!user1Online">LS {{ lastSeen }}</span>
 </nav>
 
 <section>

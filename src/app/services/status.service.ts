@@ -51,7 +51,7 @@ isVerified: boolean;
     return userRef.update(data);
   }
 
-  offineUser1() {
+  offlineUser1() {
     const userRef = this.afs.doc(`user1/she`);
     const data: User1 = {
       isOnline: false,
@@ -68,7 +68,7 @@ isVerified: boolean;
     return userRef.update(data);
   }
 
-  offineUser2() {
+  offlineUser2() {
     const userRef = this.afs.doc(`user2/he`);
     const data: User2 = {
       isOnline: false,

@@ -1,6 +1,7 @@
 <nav (click) = "delete()">
-    DB
+    Ironman
     <br> <span *ngIf = "user2Online">Online</span>
+    <span *ngIf="!user2Online">Saw {{ lastSeen }}</span>
 </nav>
 
 <section>
@@ -14,5 +15,5 @@
     <form [formGroup] = "messageForm">
         <input id = "input" class = "text" placeholder="text" formControlName="message" type = "text">
         <button color = "accent" mat-fab (click) = "postMessage()"><mat-icon color = "primary">send</mat-icon></button>
-    </form>z
+    </form>
 </footer>

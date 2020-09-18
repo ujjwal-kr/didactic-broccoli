@@ -31,7 +31,6 @@ id: any;
 
   deleteAllAndAlert() {
     this.deleteAll();
-    this.statusService.alertUser1();
     alert('Something Went Wrong!')
   }
 

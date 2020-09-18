@@ -7,6 +7,7 @@ import { Chat } from '../models/Chat';
 import { User2 } from '../models/User2';
 
 import * as firebase from 'firebase';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-talk2',
@@ -19,6 +20,7 @@ user1Online: boolean;
 messageForm: FormGroup;
 el: any;
 input: any;
+lastSeen: string;
 
   constructor(private statusService: StatusService,
     private chatService: ChatService,
@@ -27,7 +29,7 @@ input: any;
 
   ngOnInit(): void {
     window.onbeforeunload = () => {
-      this.statusService.offineUser2();
+      this.statusService.offlineUser2();
     }
     this.statusService.activateUser();
     this.el = document.getElementById("lol");
@@ -71,7 +73,7 @@ input: any;
   getUser1() {
     this.statusService.user1IsOnline().subscribe( (user: User2) => {
       this.user1Online = user.isOnline;
-      console.log(this.user1Online);
+      this.lastSeen = moment(user.lastSeen).fromNow()
     })
   }
 
@@ -88,7 +90,7 @@ input: any;
   }
 
   ngOnDestroy() {
-    this.statusService.offineUser2();
+    this.statusService.offlineUser2();
     this.statusService.deactivateUser();
   }
 
