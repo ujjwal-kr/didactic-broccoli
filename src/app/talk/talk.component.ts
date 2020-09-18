@@ -87,7 +87,7 @@ export class TalkComponent implements OnInit, OnDestroy {
 
   delete() {
     this.chatService.deleteChats();
-    this.ngOnInit();
+    this.router.navigateByUrl('/');
   }
 
   ngOnDestroy(): void {

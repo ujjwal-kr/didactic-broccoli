@@ -48,7 +48,6 @@ lastSeen: string;
 
   deactivate() {
     this.statusService.deactivateUser();
-    this.delete();
     this.ngOnInit();
   }
 
@@ -86,6 +85,7 @@ lastSeen: string;
 
   delete() {
     this.chatService.deleteChats();
+    this.deactivate();
     this.ngOnInit();
   }
 
