@@ -51,18 +51,11 @@ isVerified: boolean;
     return userRef.update(data);
   }
 
-  alertUser1() {
-    const userRef = this.afs.doc(`user1/she`);
-    const data: User1 = {
-      inTrouble: true
-    }
-    return userRef.update(data);
-  }
-
   offineUser1() {
     const userRef = this.afs.doc(`user1/she`);
-    const data = {
-      isOnline: false
+    const data: User1 = {
+      isOnline: false,
+      lastSeen: Date.now()
     }
     return userRef.update(data);
   }
@@ -70,15 +63,16 @@ isVerified: boolean;
   onlineUser2() {
     const userRef = this.afs.doc(`user2/he`);
     const data = {
-      isOnline: true
+      isOnline: true,
     }
     return userRef.update(data);
   }
 
   offineUser2() {
     const userRef = this.afs.doc(`user2/he`);
-    const data = {
-      isOnline: false
+    const data: User2 = {
+      isOnline: false,
+      lastSeen: Date.now()
     }
     return userRef.update(data);
   }
